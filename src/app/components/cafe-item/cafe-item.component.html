@@ -1,0 +1,28 @@
+<div class="cafeItem">
+  <!--routerLink="/menu"-->
+  <div class="cafeLogo"  (click)="selectCafe()">
+    <img [src]="cafe.logo" alt="Cafe Logotype">
+  </div>
+  <div class="cafeData">
+    <div class="cafeData__item">
+      <!--<span class="cafeData__item&#45;&#45;staticText">Назва: </span>-->
+      <span class="cafeData__item--name robotoMeduimClass20">{{cafe.name}}</span>
+      <div class="cafeLocation robotoRegGrey16">
+        <ion-icon class="marker" name="pin" (click)="geoCafe(cafe.position)" ></ion-icon>
+      </div>
+    </div>
+    <div class="cafeData__item">
+      <!--s-->
+      <span class="cafeData__item--address robotoRegGrey16">{{cafe.address}}</span>
+    </div>
+    <div class="cafeData__item">
+      <!--<span class="cafeData__item&#45;&#45;staticText">Номер телефону: </span>-->
+      <span class="cafeData__item--telephone">{{cafe.phone}}</span>
+    </div>
+    <div class="cafeData__info">
+      <!--<span class="cafeData__item&#45;&#45;staticText robotoRegGrey16">График роботи: </span>-->
+      <span class="cafeData__item--staticText robotoRegGrey16">{{cafe.workTime[currentDay]}} </span>
+    </div>
+  </div>
+
+</div>

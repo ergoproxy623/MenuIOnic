@@ -1,0 +1,87 @@
+@import "../../../theme/variables";
+
+.cafeItem {
+  padding: 0 16px 10px 16px;
+  border-bottom: 1px solid $bottomBorder;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+
+  .cafeLogo {
+    display: flex;
+    //align-items: center;
+    width: 35%;
+    //min-height: 100%;
+    margin-right: 10px;
+
+    img {
+      width: 100%;
+      height: 130px;
+    }
+  }
+
+  .cafeData {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 65%;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      argin-bottom: 4px;
+
+      &--timeWork {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding-inline-start: 0;
+        margin: 0;
+        &--list {
+          white-space: nowrap;
+        }
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__info {
+      //color: $lightGrey;
+      display: flex;
+
+      &--timeWork {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: space-around;
+        margin: 0;
+        padding-inline-start: 0;
+        &--list {
+
+          white-space: nowrap;
+        }
+      ;
+      }
+    }
+
+    .cafeLocation {
+      width: 8%;
+      //margin-left: 5px;
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ion-icon {
+        font-size: $fontSize26;
+      }
+    }
+  }
+}

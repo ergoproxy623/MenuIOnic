@@ -1,0 +1,161 @@
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These 
+// styles are for the entire app and not just one component. Additionally, this 
+// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// and used throughout the application.
+
+@import "../theme/variables";
+
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: RobotoItalic;
+  src: url(../assets/fonts/Roboto-Italic.ttf);
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url(../assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: RobotoBoldItalic;
+  src: url(../assets/fonts/Roboto-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url(../assets/fonts/Roboto-Medium.ttf);
+}
+
+body {
+  font-family: RobotoRegular, sans-serif;
+  font-size: $fontSize18;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 16px 0;
+}
+
+.paddingCtn {
+  padding: 16px 16px;
+}
+
+ion-icon {
+  //color: $lightGrey;
+}
+
+.headerCtn {
+  box-sizing: border-box;
+  //padding: 16px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nameCtn {
+    text-transform: uppercase;
+    font-size: $fontSize18;
+    font-weight: 600;
+    //color: $lightGrey;
+  }
+  .icons {
+    font-size: $fontSize22;
+    padding-top: 4px;
+    ion-icon {
+      color: black;
+      padding: 0 11px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+}
+.appHeader {
+  .searchbar-input.sc-ion-searchbar-md {
+    line-height: 20px !important;
+    padding-inline-start: 35px !important;
+    padding-inline-end: 15px !important;
+
+  }
+  .searchbar-search-icon.sc-ion-searchbar-md {
+    left: 6px !important;
+    top: 6px !important;
+    //color: $lightGrey !important;
+  }
+  .searchbar-clear-button.sc-ion-searchbar-md {
+    //color: $lightGrey !important;
+  }
+}
+
+.robotoMeduimClass20 {
+  font-family: RobotoMedium, sans-serif;
+  font-size: $fontSize20;
+}
+
+.robotoMeduimClass18 {
+  font-family: RobotoMedium, sans-serif;
+  font-size: $fontSize18;
+}
+
+.robotoMeduimClass15 {
+  font-family: RobotoMedium, sans-serif;
+  font-size: $fontSize15;
+  line-height: 1.5;
+}
+
+.robotoRegularClass18 {
+  font-family: RobotoRegular, sans-serif;
+  font-size: $fontSize18;
+}
+.robotoRegularClass16 {
+  font-family: RobotoRegular, sans-serif;
+  font-size: $fontSize16;
+}
+.robotoRegularClass15 {
+  font-family: RobotoRegular, sans-serif;
+  font-size: $fontSize15;
+
+}
+
+.robotoRegGrey {
+  font-family: RobotoRegular, sans-serif;
+  font-size: $fontSize18;
+  color: rgba(6, 6, 6, 0.95);
+}
+
+.robotoRegGrey16 {
+  font-family: RobotoRegular, sans-serif;
+  font-size: $fontSize16;
+  color: #737373;
+}
+
+.alert-wrapper {
+  width: 100%;
+  height: 20%;
+  margin-top: 140%;
+  transform-origin: center center;
+  transform: translateY(100) !important;
+}
+
+.button-native {
+  --padding-start: 14px !important;
+  --padding-end: 14px !important;
+}
+
+
+
+

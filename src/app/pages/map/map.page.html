@@ -1,0 +1,39 @@
+<ion-header class="map-page-header">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <!--<ion-back-button defaultHref="{{previousUrl}}"></ion-back-button>-->
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <div class="inputCtn w-100">
+
+            <ion-searchbar autocorrect="off"
+                           autocapitalize="off"
+                           spellcheck="off"
+                           #googleSearch
+                           placeholder="Search..."
+                           class="search-box w-100"
+                           (ionClear)="clearSearchArr($event)"
+                           (input)="updateSearchResults($event)"
+            >
+
+            </ion-searchbar>
+        </div>
+
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="map-page-content">
+    <div class="search-ctn robotoMeduimClass15" [hidden]="autocompleteItems.length === 0">
+        <ion-list class="search-ctn__list" >
+            <ion-item button *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+                {{item.description}}
+            </ion-item>
+        </ion-list>
+    </div>
+    <div class="wrapper">
+        <div id="map_canvas"></div>
+        <!--    <app-marker-events></app-marker-events>-->
+
+    </div>
+</ion-content>
